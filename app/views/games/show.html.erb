@@ -21,7 +21,7 @@
       <p> <%= @game.end_message %> </p>
       <p> The word was: <%= @game.word %></p>
     </div>
-      <%= button = button_to("New Game?", '/games') %>
+      <%= button = button_to("New Game?", '/games', :autofocus => true) %>
     <% end %>
 </div>
 </head>
