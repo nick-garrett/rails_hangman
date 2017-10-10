@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   resources :widgets
-  root 'application#hello'
+  resources :games do
+    resources :guess, only: [:create]
+  end
+  root 'games#index'
+  # post 'play' => 'games#create'
+  # get  'play' => 'games#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

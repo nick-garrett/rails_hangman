@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+.hangman {
+  background-color: #efefef;
+  text-align: center
+}
+
+.guess {
+  font-size: 3em;
+  margin-top: 0;
+}
+
+.title {
+  font-size: 5em;
+  text-align: center;
+}
