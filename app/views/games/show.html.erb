@@ -6,10 +6,10 @@
   <h1 class="title"> Hangman </h1>
   <div class="hangman">
     <br>
-    <p class="guess"> <%= @game.masked_word.map { |x| x ? x : '_' }.join(' ') %> </p>
-    <p> Guessed Letters: <%= @game.letters.join %> </p>
-    <p> Lives Left: <%= @game.lives_remaining %>
-    <% if !@game.game_over? %>
+    <p class="guess"> <%= masked_word %> </p>
+    <p> Guessed Letters: <%= guessed_letters %> </p>
+    <p> Lives Left: <%= lives_remaining %>
+    <% if game_running? %>
       <%= form_tag(game_url+"/guess") do %>
         <%= label_tag(:letter, "Enter Guess:") %>
         <%= text_field_tag :letter, "", pattern: /^[A-Za-z]$/, :class => "form-control", :maxlength => 1, :autofocus => true%>
