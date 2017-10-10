@@ -5,39 +5,8 @@ class Game < ActiveRecord::Base
   TOTAL_LIVES = 10
 
   def self.choose_word
-    random_word(word_array)
-    # @guesses = []
+    Word.order('RANDOM()').first.word.chomp
   end
-
-  def self.random_word(words)
-    words.sample.chomp
-  end
-
-  def self.word_array
-    File.readlines(Rails.root + 'config/dictionary.txt')
-  end
-
-  # def initialize(word, lives = 10)
-  #   @guessed = []
-  #   @word = word.chars
-  #   @total_lives = lives
-  # end
-
-  def validate_guess(guess)
-    if letters.include? guess
-      'Already guessed, try again'
-    elsif guess.size > 1
-      'Please only input one letter, try again'
-    elsif !guess.match(/^[[:alpha:]]$/)
-      'Please only input letters, try again'
-    else
-      false
-    end
-  end
-
-  # def add_to_guessed(char)
-  #   guessed.push char
-  # end
 
   def letters
     guesses.pluck(:letter)
