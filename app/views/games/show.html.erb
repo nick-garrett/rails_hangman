@@ -11,8 +11,8 @@
     <p> Lives Left: <%= @game.lives_remaining %>
     <% if !@game.game_over? %>
       <%= form_tag(game_url+"/guess") do %>
-        <%= label_tag(:guess, "Enter Guess:") %>
-        <%= text_field_tag :guess, "", pattern: /^[A-Za-z]$/, :class => "form-control", :maxlength => 1, :autofocus => true%>
+        <%= label_tag(:letter, "Enter Guess:") %>
+        <%= text_field_tag :letter, "", pattern: /^[A-Za-z]$/, :class => "form-control", :maxlength => 1, :autofocus => true%>
         <%= submit_tag("Submit") %>
       <% end %>
       <br>
