@@ -1,3 +1,4 @@
+#:nodoc:
 module GamesHelper
   def start_button
     button_to('Start Game', '/games', autofocus: true)
@@ -20,6 +21,6 @@ module GamesHelper
   end
 
   def new_game_button
-    button_to('New Game', '/games', autofocus: true) 
+    button_to('New Game', '/games', autofocus: true)
   end
 end

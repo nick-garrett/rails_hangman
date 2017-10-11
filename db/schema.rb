@@ -26,12 +26,6 @@ ActiveRecord::Schema.define(version: 20171010200411) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "widgets", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "words", force: :cascade do |t|
     t.string "word"
   end

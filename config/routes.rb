@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :widgets
   resources :games do
-    resources :guess, only: [:create]
+    resources :guesses, only: [:create]
   end
   root 'games#index'
   # post 'play' => 'games#create'
@@ -60,5 +59,4 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
 end

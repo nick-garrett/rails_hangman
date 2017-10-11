@@ -1,0 +1,3 @@
+#:nodoc:
+module GuessesHelper
+end
