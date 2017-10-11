@@ -20,6 +20,6 @@ module GamesHelper
   end
 
   def new_game_button
-    button_to("New Game", '/games', :autofocus => true) 
+    button_to('New Game', '/games', autofocus: true) 
   end
 end
