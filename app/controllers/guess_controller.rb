@@ -1,7 +1,9 @@
 class GuessController < ApplicationController
   def create
     game = Game.find_by_id!(params[:game_id])
-    game.guesses.create(guess_params).save
+    guess = game.guesses.create(guess_params)
+
+    flash[:fail] = guess.errors.first.last unless guess.save
     redirect_to(game)
   end
 
