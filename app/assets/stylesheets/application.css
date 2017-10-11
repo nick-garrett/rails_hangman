@@ -31,3 +31,9 @@
 .centered {
   text-align: center;
 }
+
+.flash_error {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
