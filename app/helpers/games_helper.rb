@@ -1,6 +1,6 @@
 module GamesHelper
   def start_button
-    button_to('Start Game', '/games', :autofocus => true)
+    button_to('Start Game', '/games', autofocus: true)
   end
 
   def masked_word
@@ -17,5 +17,9 @@ module GamesHelper
 
   def game_running?
     !@game.game_over?
+  end
+
+  def new_game_button
+    button_to("New Game", '/games', :autofocus => true) 
   end
 end
