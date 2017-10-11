@@ -9,25 +9,30 @@
     <p class="guess"> <%= masked_word %> </p>
     <p> Guessed Letters: <%= guessed_letters %> </p>
     <p> Lives Left: <%= lives_remaining %>
-    <% if game_running? %>
-      <%= form_tag(game_url+"/guess") do %>
-        <%= label_tag(:letter, "Enter Guess:") %>
-        <%= text_field_tag :letter, "", pattern: /^[A-Za-z]$/, :class => "form-control", :maxlength => 1, :autofocus => true%>
-        <%= submit_tag("Submit") %>
+      <% if game_running? %>
+        <%= form_tag(game_url+"/guess") do %>
+          <%= label_tag(:letter, "Enter Guess:") %>
+          <%= text_field_tag :letter, "", pattern: /^[A-Za-z]$/, :class => "form-control", :maxlength => 1, :autofocus => true%>
+          <%= submit_tag("Submit") %>
+        <% end %>
+        <br>
+      <% else %>
+      <div class="game_over">
+        <p> <%= @game.end_message %> </p>
+        <p> The word was: <%= @game.word %></p>
+      </div>
+      <%= new_game_button %>
       <% end %>
-      <br>
-    <% else %>
-    <div class="game_over">
-      <p> <%= @game.end_message %> </p>
-      <p> The word was: <%= @game.word %></p>
     </div>
-      <%= button = button_to("New Game?", '/games', :autofocus => true) %>
-    <% end %>
-</div>
-</head>
-<body>
+    <div class="flash_error">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+  </head>
+  <body>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
-</html>
+  </body>
+  </html>
