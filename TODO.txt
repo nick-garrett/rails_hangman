@@ -1,0 +1,11 @@
+TESTS
+- controllers
+--- games controller
+--- guesses controller
+- models
+--- game
+--- guess ??? no methods apart from before validation downcasing
+- routes ?? need to read up on how to test
+- views ?? cucumber???
+--- game#show
+--- game#create

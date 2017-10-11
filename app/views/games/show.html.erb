@@ -10,10 +10,11 @@
     <p> Lives Left: <%= lives_remaining %>
       <% if game_running? %>
           <%= render 'guesses/guess_form'%>
-          <br>
+
         <% else %>
           <%= render 'game_over' %>
       <% end %>
+      <br>
     </div>
     <%= render 'flash_error' %>
   </head>

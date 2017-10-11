@@ -4,7 +4,6 @@ class GamesController < ApplicationController
   end
 
   def create
-    # @game = Game.create!
     @game = Game.new
     @game.word = Game.choose_word
     @game.save
