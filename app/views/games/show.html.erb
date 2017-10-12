@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>RailsHangman</title>
-  <h1 class="title"> Hangman </h1>
-  <div class="hangman">
-    <br>
-    <%= render 'masked_word' %>
-    <p> Guessed Letters: <%= guessed_letters %> </p>
-    <p> Lives Left: <%= lives_remaining %>
-      <% if game_running? %>
-          <%= render 'guesses/guess_form'%>
-
-        <% else %>
-          <%= render 'game_over' %>
-      <% end %>
-      <br>
-    </div>
-    <%= render 'flash_error' %>
-  </head>
-  <body>
-
-    <%= yield %>
-
-  </body>
-  </html>
+<h1 class="title">Hangman</h1>
+<div class="hangman">
+  <br/>
+  <%= render 'game_status' %>
+  <% if game_running? %>
+    <%= render 'guesses/guess_form'%>
+  <% else %>
+    <%= render 'game_over' %>
+  <% end %>
+  <br/>
+</div>
+<%= render 'flash_error' %>
