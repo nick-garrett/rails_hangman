@@ -7,5 +7,15 @@ TESTS
 --- guess ??? no methods apart from before validation downcasing
 - routes ?? need to read up on how to test
 - views ?? cucumber???
---- game#show
---- game#create
+--- game show
+--- game create
+--- partials ??
+
+Other stuff
+- Guesses controller
+-- # TODO: what happens when it doesn't exist, find_by, find_by_id (don't use), find
+-- # TODO: flash conventions, full_messages
+- game model
+-- #TODO: destroy guesses when game destroyed
+- guess model
+-- # TODO: test if validate_uniqueness_of works without the scope in this case
