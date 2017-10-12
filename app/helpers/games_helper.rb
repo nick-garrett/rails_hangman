@@ -5,7 +5,7 @@ module GamesHelper
   end
 
   def guessed_letters
-    @game.letters.join
+    @game.guessed_letters.join
   end
 
   def lives_remaining
