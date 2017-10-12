@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 #:nodoc:
 class GuessesController < ApplicationController
   def create
-    game = Game.find_by_id!(params[:game_id])
+    # TODO: what happens when it doesn't exist, find_by, find_by_id (don't use), find
+    game = Game.find(params[:game_id])
     guess = game.guesses.create(guess_params)
-
-    flash[:fail] = guess.errors.first.last unless guess.save
+    # TODO: flash conventions, full_messages
+    flash[:error] = guess.errors.first.last unless guess.save
     redirect_to(game)
   end
 
