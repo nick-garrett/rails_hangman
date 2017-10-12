@@ -4,13 +4,11 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new
-    @game.word = Game.choose_word
-    @game.save
-    redirect_to(@game)
+    @game = Game.new(word: Word.choose_word)
+    redirect_to(@game) if @game.save!
   end
 
   def show
-    @game = Game.find_by_id(params[:id])
+    @game = Game.find(params[:id])
   end
 end
