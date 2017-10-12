@@ -1,6 +1,6 @@
 TESTS
 - controllers
---- games controller
+--- games controller -------- DONE
 --- guesses controller
 - models
 --- game
@@ -19,3 +19,5 @@ Other stuff
 -- #TODO: destroy guesses when game destroyed
 - guess model
 -- # TODO: test if validate_uniqueness_of works without the scope in this case
+
+-- 404 errors?
