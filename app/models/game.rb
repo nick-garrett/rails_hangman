@@ -1,10 +1,12 @@
 #:nodoc:
 class Game < ActiveRecord::Base
-  has_many :guesses # TODO: destroy guesses when game destroyed
+  has_many :guesses
+  
+  before_destroy :destroy_guesses
 
   TOTAL_LIVES = 10
 
-  def letters
+  def guessed_letters
     guesses.pluck(:letter)
   end
 
@@ -13,15 +15,15 @@ class Game < ActiveRecord::Base
   end
 
   def lives_remaining
-    TOTAL_LIVES - (letters - word.chars).size
+    TOTAL_LIVES - (guessed_letters - word.chars).size
   end
 
   def masked_word
-    word.chars.map { |x| x if letters.include? x }
+    word.chars.map { |x| x if guessed_letters.include? x }
   end
 
   def won?
-    (word.chars - letters).size.zero?
+    (word.chars - guessed_letters).size.zero?
   end
 
   def lost?
