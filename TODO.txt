@@ -4,7 +4,7 @@ TESTS
 --- guesses controller
 - models
 --- game -------- DONE
---- guess ??? no methods apart from before validation downcasing
+--- guess ------- DONE
 - routes ?? need to read up on how to test
 - views ?? cucumber???
 --- game show
@@ -15,9 +15,8 @@ Other stuff
 - Guesses controller
 -- # TODO: what happens when it doesn't exist, find_by, find_by_id (don't use), find
 -- # TODO: flash conventions, full_messages
-- game model
--- #TODO: destroy guesses when game destroyed
 - guess model
 -- # TODO: test if validate_uniqueness_of works without the scope in this case
+---------RESULT: Yes it is required. The reason I questioned it is because a guess belongs to a game, however validates_uniqueness_of checks it against all guesses in the scope, which defaults to all
 
 -- 404 errors?
