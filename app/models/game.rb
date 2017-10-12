@@ -1,12 +1,8 @@
 #:nodoc:
 class Game < ActiveRecord::Base
-  has_many :guesses
+  has_many :guesses # TODO: destroy guesses when game destroyed
 
   TOTAL_LIVES = 10
-
-  def self.choose_word
-    Word.order('RANDOM()').first.word.chomp
-  end
 
   def letters
     guesses.pluck(:letter)
@@ -23,12 +19,6 @@ class Game < ActiveRecord::Base
   def masked_word
     word.chars.map { |x| x if letters.include? x }
   end
-
-  def end_message
-    won? ? 'You won!' : 'You lost!'
-  end
-
-  private
 
   def won?
     (word.chars - letters).size.zero?
