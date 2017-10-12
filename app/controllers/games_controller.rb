@@ -4,7 +4,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(word: Word.choose_word)
+    @game = Game.create(word: Word.choose_word)
     redirect_to(@game) if @game.save!
   end
 
