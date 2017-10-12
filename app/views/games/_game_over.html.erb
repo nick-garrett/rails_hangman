@@ -1,5 +1,5 @@
 <div class="game_over">
-  <p> <%= @game.end_message %> </p>
+  <p> <%= @game.won? ? 'You won!' : 'You lost!' %> </p>
   <p> The word was: <%= @game.word %></p>
-  <%= new_game_button %>
+  <%= button_to('New Game', '/games', autofocus: true) %>
 </div>
