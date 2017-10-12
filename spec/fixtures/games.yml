@@ -1,0 +1,35 @@
+won_game:
+  word: word
+  id: 1
+
+not_won_game:
+  word: word
+  id: 2
+
+lost_game:
+  word: zyxw
+  id: 3
+
+not_lost_game:
+  word: word
+  id: 4
+
+zero_lives_game:
+  word: z
+  id: 5
+
+nine_lives_game:
+  word: z
+  id: 6
+
+first_letter_guessed_game:
+  word: word
+  id: 7
+
+no_guess_game:
+  word: word
+  id: 8
+
+word_guessed_game:
+  word: word
+  id: 9

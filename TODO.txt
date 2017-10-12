@@ -1,9 +1,9 @@
 TESTS
 - controllers
---- games controller -------- DONE
+--- games controller 
 --- guesses controller
 - models
---- game
+--- game -------- DONE
 --- guess ??? no methods apart from before validation downcasing
 - routes ?? need to read up on how to test
 - views ?? cucumber???

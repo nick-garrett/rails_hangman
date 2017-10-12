@@ -1,0 +1,159 @@
+# The following guesses are for the won_game game
+<% WON_GAME_ID = 1 %>
+won_1:
+  letter: w
+  game_id: <%= WON_GAME_ID %>
+
+won_2:
+  letter: o
+  game_id: <%= WON_GAME_ID %>
+
+won_3:
+  letter: r
+  game_id: <%= WON_GAME_ID %>
+
+won_4: 
+  letter: d
+  game_id: <%= WON_GAME_ID %>
+
+#The following guesses are for the not_won_game game
+<% NOT_WON_GAME_ID = 2 %>
+not_won_1:
+  letter: w
+  game_id: <%= NOT_WON_GAME_ID %>
+
+not_won_2:
+  letter: o
+  game_id: <%= NOT_WON_GAME_ID %>
+
+not_won_3:
+  letter: r
+  game_id: <%= NOT_WON_GAME_ID %>
+
+#The following guesses are for the lost_game game
+<% LOST_GAME_ID = 3 %>
+lost_1:
+  letter: a
+  game_id: <%= LOST_GAME_ID %>
+
+lost_2:
+  letter: b
+  game_id: <%= LOST_GAME_ID %>
+
+lost_3:
+  letter: c
+  game_id: <%= LOST_GAME_ID %>
+
+lost_4:
+  letter: d
+  game_id: <%= LOST_GAME_ID %>
+
+lost_5:
+  letter: e
+  game_id: <%= LOST_GAME_ID %>
+
+lost_6:
+  letter: f
+  game_id: <%= LOST_GAME_ID %>
+
+lost_7:
+  letter: g
+  game_id: <%= LOST_GAME_ID %>
+
+lost_8:
+  letter: h
+  game_id: <%= LOST_GAME_ID %>
+
+lost_9:
+  letter: i
+  game_id: <%= LOST_GAME_ID %>
+
+lost_10:
+  letter: j
+  game_id: <%= LOST_GAME_ID %>
+
+#The following guesses are for the not_lost_game game
+<% NOT_LOST_GAME_ID = 4 %>
+not_won_1:
+  letter: w
+  game_id: <%= NOT_LOST_GAME_ID %>
+
+not_won_2:
+  letter: o
+  game_id: <%= NOT_LOST_GAME_ID %>
+
+not_won_3:
+  letter: r
+  game_id: <%= NOT_LOST_GAME_ID %>
+
+#The following guesses are for the zero_lives_game game
+<% ZERO_LIVES_GAME_ID = 5 %>
+zero_lives_1:
+  letter: a
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_2:
+  letter: b
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_3:
+  letter: c
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_4:
+  letter: d
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_5:
+  letter: e
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_6:
+  letter: f
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_7:
+  letter: g
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_8:
+  letter: h
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_9:
+  letter: i
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+zero_lives_10:
+  letter: j
+  game_id: <%= ZERO_LIVES_GAME_ID %>
+
+#The following guesses are for the nine_lives_game game
+<% NINE_LIVES_GAME_ID = 6 %>
+nine_lives_1:
+  letter: a
+  game_id: <%= NINE_LIVES_GAME_ID %>
+
+#The following guesses are for the first_letter_guessed_game game
+<% FIRST_LETTER_GUESSED_GAME = 7 %>
+nine_lives_1:
+  letter: w
+  game_id: <%= FIRST_LETTER_GUESSED_GAME %>
+
+# The following guesses are for the word_guessed_game game
+<% WORD_GUESSED_GAME_ID = 9 %>
+word_guessed_1:
+  letter: w
+  game_id: <%= WORD_GUESSED_GAME_ID %>
+
+word_guessed_2:
+  letter: o
+  game_id: <%= WORD_GUESSED_GAME_ID %>
+
+word_guessed_3:
+  letter: r
+  game_id: <%= WORD_GUESSED_GAME_ID %>
+
+word_guessed_4: 
+  letter: d
+  game_id: <%= WORD_GUESSED_GAME_ID %>
