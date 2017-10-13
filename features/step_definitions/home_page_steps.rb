@@ -1,8 +1,11 @@
-When(/^I go to the home page$/) do
+Given(/^I am on the home page$/) do
   visit root_path
 end
 
-Then(/^I should be able to start a new game$/) do
+When(/^I click the start game button$/) do
   click_button('Start Game')
+end
+
+Then(/^I should be taken to a new game$/) do
   expect(page).to have_content('Guessed Letters')
 end
