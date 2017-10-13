@@ -1,6 +1,6 @@
 TESTS
 - controllers
---- games controller 
+--- games controller------------ DONE
 --- guesses controller
 - models
 --- game -------- DONE
@@ -14,7 +14,9 @@ TESTS
 Other stuff
 - Guesses controller
 -- # TODO: what happens when it doesn't exist, find_by, find_by_id (don't use), find
+---------RESULT: Find throws an error when it doesn't exist, find_by returns nil. Needed to use id: params[:id] for find_by but not find? Not sure why
 -- # TODO: flash conventions, full_messages
+
 - guess model
 -- # TODO: test if validate_uniqueness_of works without the scope in this case
 ---------RESULT: Yes it is required. The reason I questioned it is because a guess belongs to a game, however validates_uniqueness_of checks it against all guesses in the scope, which defaults to all
