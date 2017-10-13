@@ -1,7 +1,7 @@
 #:nodoc:
 module GamesHelper
-  def masked_word(word)
-    word.map { |x| x ? x : '_' }.join(' ')
+  def masked_word(masked_letters)
+    masked_letters.map { |x| x ? x : '_' }.join(' ')
   end
 
   def guessed_letters
