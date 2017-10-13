@@ -40,7 +40,7 @@ RSpec.describe GamesController, type: :controller do
     context 'when requested game id does not exist' do
       let(:id) { 1000 }
       it 'should redirect to #index' do
-        expect(response).to redirect_to(:games)
+        expect(response).to redirect_to('/')
       end
     end
 
