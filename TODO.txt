@@ -1,7 +1,7 @@
 TESTS
 - controllers
 --- games controller------------ DONE
---- guesses controller
+--- guesses controller---------- DONE
 - models
 --- game -------- DONE
 --- guess ------- DONE
