@@ -4,7 +4,8 @@
 class GuessesController < ApplicationController
   def create
     game = Game.find_by(id: params[:game_id])
-    redirect_to '/' unless game
+    # byebug
+    redirect_to '/' and return unless game
     guess = game.guesses.create(guess_params)
     # TODO: flash conventions, full_messages
     flash[:error] = guess.errors.first.last unless guess.save
