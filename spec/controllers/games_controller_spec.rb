@@ -41,5 +41,12 @@ RSpec.describe GamesController, type: :controller do
       get :show, id: 1
       expect(response).to render_template(:show)
     end
+
+    context 'when requested game id does not exist' do
+      it 'should redirect to #index' do
+        get :show, id: 10000
+        expect(response).to redirect_to(:index)
+      end
+    end
   end
 end
