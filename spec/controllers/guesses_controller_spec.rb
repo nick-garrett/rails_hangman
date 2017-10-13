@@ -46,7 +46,7 @@ RSpec.describe GuessesController, type: :controller do
 
     context 'when an invalid game_id is posted' do
       before do
-        post :create, game_id: 10000, guess: { letter: guess }
+        post :create, game_id: 10_000, guess: { letter: guess }
       end
 
       it 'redirects to root' do
