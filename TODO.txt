@@ -5,13 +5,9 @@ TESTS
 - models
 --- game -------- DONE
 --- guess ------- DONE
---- word
-- routes ?? need to read up on how to test
 - views ?? cucumber???
 --- game show
 --- game create
---- partials ??
-- games_helper
 
 Other stuff
 - Guesses controller
