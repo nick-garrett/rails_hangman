@@ -32,20 +32,22 @@ RSpec.describe GamesController, type: :controller do
       expect(response).to have_http_status(:success)
     end
 
-    it 'sets game object' do
-      get :show, id: 1
-      expect(assigns[:game]).not_to be_nil
-    end
-
-    it 'renders the show template' do
-      get :show, id: 1
-      expect(response).to render_template(:show)
-    end
-
     context 'when requested game id does not exist' do
       it 'should redirect to #index' do
         get :show, id: 10000
         expect(response).to redirect_to(:index)
+      end
+    end
+
+    context 'when requested game id does exist' do
+      it 'sets game object' do
+        get :show, id: 1
+        expect(assigns[:game]).not_to be_nil
+      end
+      
+      it 'renders the show template' do
+        get :show, id: 1
+        expect(response).to render_template(:show)
       end
     end
   end
