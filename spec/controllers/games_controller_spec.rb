@@ -46,7 +46,7 @@ RSpec.describe GamesController, type: :controller do
 
     context 'when requested game id does exist' do
       it 'sets game object' do
-        expect(assigns[:game]).not_to be_nil
+        expect(assigns[:game].id).to eq id
       end
 
       it 'renders the show template' do
