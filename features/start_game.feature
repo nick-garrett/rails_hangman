@@ -1,4 +1,4 @@
-Feature: Home Page
+Feature: Start Game
 As a user, I want to be able to click a button to start a new game
 
 Scenario: User can click the button to start a new game
