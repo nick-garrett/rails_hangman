@@ -13,7 +13,7 @@ RSpec.describe Guess, type: :model do
 
       it "doesn't pass validation checks" do
         expect(guess).not_to be_valid
-        expect(guess.errors[:letter]).to include 'Guess must be a letter'
+        expect(guess.errors[:letter]).to include 'is invalid'
       end
     end
 
@@ -31,7 +31,7 @@ RSpec.describe Guess, type: :model do
 
       it "doesn't pass validation checks" do
         expect(guess).not_to be_valid
-        expect(guess.errors[:letter]).to include 'Already guessed this letter'
+        expect(guess.errors[:letter]).to include 'has already been taken'
       end
     end
 
@@ -44,8 +44,8 @@ RSpec.describe Guess, type: :model do
 
       it 'passes validation checks' do
         expect(guess).to be_valid
-        expect(guess.errors[:letter]).not_to include 'Guess must be a letter'
-        expect(guess.errors[:letter]).not_to include 'Already guessed this letter'
+        expect(guess.errors[:letter]).not_to include 'is invalid'
+        expect(guess.errors[:letter]).not_to include 'has already been taken'
       end
     end
 
