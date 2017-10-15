@@ -3,7 +3,8 @@ class Word < ActiveRecord::Base
   scope :random_order, -> { order('RANDOM()') }
 
   def self.choose_word
-    return nil if Word.random_order.empty?
-    Word.random_order.first.word
+    rand_order = Word.random_order
+    return nil if rand_order.empty?
+    rand_order.first.word
   end
 end
