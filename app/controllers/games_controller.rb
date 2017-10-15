@@ -10,6 +10,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find_by(id: params[:id])
+    redirect_to '/' and return unless @game.word
     redirect_to '/' unless @game
   end
 end
