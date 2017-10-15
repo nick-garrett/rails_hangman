@@ -10,11 +10,11 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find_by(id: params[:id])
+    redirect_to '/' and return unless @game
     unless @game.word
       flash[:error] = 'Unitialized db.'
       redirect_to '/'
       return
     end
-    redirect_to '/' unless @game
   end
 end
