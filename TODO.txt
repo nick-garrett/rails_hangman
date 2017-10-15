@@ -17,6 +17,7 @@ Other stuff
 -----------RESULT: full_messages returns a message based on the validation type and the attribute validating
 
 -- # TODO: Check for when word is nil!!!
+--------------DONE: Had to do a check in the choose_word method in the Word model to check if there are any elements in the db and return nil if there aren't. Then in game #show, set a flash error and redirect to root if the word is nil.
 
 - guess model
 -- # TODO: test if validate_uniqueness_of works without the scope in this case
