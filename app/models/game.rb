@@ -1,7 +1,7 @@
 #:nodoc:
 class Game < ActiveRecord::Base
   has_many :guesses
-  
+
   before_destroy :destroy_guesses
 
   TOTAL_LIVES = 10
