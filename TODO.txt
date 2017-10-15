@@ -5,15 +5,16 @@ TESTS
 - models
 --- game -------- DONE
 --- guess ------- DONE
-- views ?? cucumber???
---- game show
---- game create
+- views ?? cucumber??? ------ DONE
+--- game show ---- DONE
+--- game create ---- DONE
 
 Other stuff
 - Guesses controller
 -- # TODO: what happens when it doesn't exist, find_by, find_by_id (don't use), find
 ---------RESULT: Find throws an error when it doesn't exist, find_by returns nil. Needed to use id: params[:id] for find_by but not find? Not sure why
 -- # TODO: flash conventions, full_messages
+-----------RESULT: full_messages returns a message based on the validation type and the attribute validating
 
 -- # TODO: Check for when word is nil!!!
 
