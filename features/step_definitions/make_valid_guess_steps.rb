@@ -1,13 +1,12 @@
 # let(:guess) { 't' }
 
-Given(/^I am on a new game page$/) do
+Given(/^I have started a new game$/) do
   visit root_path
   click_button('Start Game')
 end
 
-When(/^I submit a guess$/) do
-  # enter guess into form ???
-  fill_in "guess[letter]", with: 't'
+When(/^I submit the guess "(.)"$/) do |guess|
+  fill_in 'guess[letter]', with: guess
   click_button('Submit')
 end
 
