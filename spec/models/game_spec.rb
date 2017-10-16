@@ -5,6 +5,32 @@ RSpec.describe Game, type: :model do
   fixtures :guesses
 
   let(:word) { 'word' }
+ 
+  describe '#word' do
+    context 'when a game is created with a nil word' do
+      let(:game) { Game.create(word: nil) }
+
+      it 'will not be valid' do
+        expect(game).not_to be_valid
+      end
+
+      it 'will have appropriate error message' do
+        expect(game.errors.full_messages).to include("Word can't be blank")
+      end
+    end
+
+    context 'when a game is created with a word' do
+      let(:game) { Game.create(word: word) }
+
+      it 'will not valid' do
+        expect(game).to be_valid
+      end
+
+      it 'will not have error message' do
+        expect(game.errors.full_messages).not_to include("Word can't be blank")
+      end
+    end
+  end
 
   describe '#guessed_letters' do
     context 'when no letters are guessed' do
