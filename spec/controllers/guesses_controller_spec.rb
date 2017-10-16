@@ -41,15 +41,5 @@ RSpec.describe GuessesController, type: :controller do
         expect(flash[:error]).not_to be_nil
       end
     end
-
-    context 'when an invalid game_id is posted' do
-      before do
-        post :create, game_id: 10_000, guess: { letter: guess }
-      end
-
-      it 'redirects to root' do
-        expect(response).to redirect_to('/')
-      end
-    end
   end
 end
