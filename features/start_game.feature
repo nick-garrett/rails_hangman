@@ -1,7 +1,7 @@
 Feature: Start Game
-As a user, I want to be able to click a button to start a new game
+As a user, I want to be able to start a new game so I can play Hangman
 
-Scenario: User can click the button to start a new game
+Scenario: User can start a new game
   Given I am on the home page
-  When I click the start game button
+  When I start a new game
   Then I should be taken to a new game
