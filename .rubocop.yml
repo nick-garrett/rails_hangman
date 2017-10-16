@@ -1,7 +1,14 @@
-
 AllCops:
   Exclude:
     - test/test_helper.rb
     - spec/spec_helper.rb
     - spec/rails_helper.rb
   TargetRubyVersion: 2.4
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Documentation:
+  Enabled: false
