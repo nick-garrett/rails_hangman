@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe GamesController, type: :controller do
-  # pending "add some examples to (or delete) #{__FILE__}"
   fixtures 'words'
   fixtures 'games'
 
@@ -33,13 +32,6 @@ RSpec.describe GamesController, type: :controller do
 
     it 'returns http success' do
       expect(response).to have_http_status(:success)
-    end
-
-    context 'when requested game id does not exist' do
-      let(:id) { 1000 }
-      it 'should redirect to #index' do
-        expect(response).to redirect_to('/')
-      end
     end
 
     context 'when requested game id does exist' do
