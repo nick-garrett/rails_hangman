@@ -4,4 +4,4 @@ As a user, if I enter a guess that is not valid (non-alphabetic characters) I ge
 Scenario: User can enter an invalid guess and expect an error message
   Given I have started a new game
   When I submit the guess "!"
-  Then I should see "Letter is invalid"
+  Then I should see a invalid letter error

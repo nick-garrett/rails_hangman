@@ -5,4 +5,4 @@ Scenario: User enters the same guess twice and expects an error message
 Given I have started a new game
 When I submit the guess "t"
 And I submit the guess "t"
-Then I should see "Letter has already been taken"
+Then I should see a unique letter error

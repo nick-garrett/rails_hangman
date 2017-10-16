@@ -4,4 +4,4 @@ As a user, when all of the letters in the word have been guessed correctly, I ex
 Scenario: User enters correct letters and expects won message
   Given I have started a new game
   When I submit the guesses "w,o,r,d"
-  Then I should see "You won!"
+  Then I should see a won message

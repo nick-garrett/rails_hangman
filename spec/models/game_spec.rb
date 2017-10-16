@@ -5,7 +5,7 @@ RSpec.describe Game, type: :model do
   fixtures :guesses
 
   let(:word) { 'word' }
- 
+
   describe '#word' do
     context 'when a game is created with a nil word' do
       let(:game) { Game.create(word: nil) }
