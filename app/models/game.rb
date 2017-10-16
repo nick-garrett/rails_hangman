@@ -4,6 +4,8 @@ class Game < ActiveRecord::Base
 
   before_destroy :destroy_guesses
 
+  validates_presence_of :word
+
   TOTAL_LIVES = 10
 
   def guessed_letters
@@ -23,7 +25,7 @@ class Game < ActiveRecord::Base
   end
 
   def won?
-    (word.chars - guessed_letters).size.zero?
+    (word.chars - guessed_letters).empty?
   end
 
   def lost?
