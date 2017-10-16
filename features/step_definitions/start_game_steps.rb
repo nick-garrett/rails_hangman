@@ -2,7 +2,7 @@ Given(/^I am on the home page$/) do
   visit root_path
 end
 
-When(/^I click the start game button$/) do
+When(/^I start a new game$/) do
   click_button('Start Game')
 end
 
