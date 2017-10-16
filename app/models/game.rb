@@ -1,7 +1,5 @@
 class Game < ActiveRecord::Base
-  has_many :guesses
-
-  before_destroy :destroy_guesses
+  has_many :guesses, dependent: :destroy
 
   validates_presence_of :word
 
