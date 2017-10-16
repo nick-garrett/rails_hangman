@@ -8,6 +8,6 @@ class Guess < ActiveRecord::Base
   belongs_to :game
 
   def downcase_letter
-    letter.downcase!
+    letter&.downcase!
   end
 end
