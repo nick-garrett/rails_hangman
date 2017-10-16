@@ -1,7 +1,6 @@
 class GuessesController < ApplicationController
   def create
-    game = Game.find_by(id: params[:game_id])
-    redirect_to root_path and return unless game
+    game = Game.find(params[:game_id])
     guess = game.guesses.create(guess_params)
 
     flash[:error] = guess.errors.full_messages.first unless guess.valid?
