@@ -1,4 +1,3 @@
-#:nodoc:
 class Game < ActiveRecord::Base
   has_many :guesses
 

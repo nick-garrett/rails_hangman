@@ -1,4 +1,3 @@
-#:nodoc:
 class Guess < ActiveRecord::Base
   validates_uniqueness_of :letter, scope: :game_id
   validates_format_of :letter, with: /\A[a-zA-Z]+\z/

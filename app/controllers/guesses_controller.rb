@@ -1,4 +1,3 @@
-#:nodoc:
 class GuessesController < ApplicationController
   def create
     game = Game.find_by(id: params[:game_id])
