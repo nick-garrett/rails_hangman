@@ -5,16 +5,10 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.create(word: Word.choose_word)
-    redirect_to(@game) if @game.save!
+    redirect_to(@game) if @game.valid?
   end
 
   def show
-    @game = Game.find_by(id: params[:id])
-    redirect_to root_path and return unless @game
-    unless @game.word
-      flash[:error] = 'Unitialized db.'
-      redirect_to root_path
-      return
-    end
+    @game = Game.find(id: params[:id]) 
   end
 end
