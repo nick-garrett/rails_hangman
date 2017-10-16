@@ -9,6 +9,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(id: params[:id]) 
+    @game = Game.find(id: params[:id])
   end
 end

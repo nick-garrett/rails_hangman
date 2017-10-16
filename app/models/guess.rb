@@ -1,6 +1,5 @@
 #:nodoc:
 class Guess < ActiveRecord::Base
-  # TODO: test if it works without the scope
   validates_uniqueness_of :letter, scope: :game_id
   validates_format_of :letter, with: /\A[a-zA-Z]+\z/
 
