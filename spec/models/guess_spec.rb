@@ -15,6 +15,15 @@ RSpec.describe Guess, type: :model do
       end
     end
 
+    context 'when no letter has been guessed' do
+      let(:guess) { Guess.new }
+
+      it "doesn't pass validation checks" do
+        expect(guess).not_to be_valid
+        expect(guess.errors[:letter]).to include "is invalid"
+      end
+    end
+
     context 'when letter has already been guessed' do
       let(:guess) { Guess.new }
 
