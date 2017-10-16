@@ -1,4 +1,3 @@
-#:nodoc:
 class GamesController < ApplicationController
   def index
   end
@@ -9,6 +8,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(id: params[:id])
+    @game = Game.find(params[:id])
   end
 end
